@@ -23,6 +23,10 @@ jobs:
       - run: echo "VARIABLE:$NAME"
 
   Testing-ENV-VARIABLES:
+    needs: Explore-Github-Actions
+    env:
+      JOB-NAME: Testing-ENV-VARIABLES
     runs-on: ubuntu-latest
     steps:
       - run: echo "Variable:$NAME"
+      - run: echo "JOB-NAME: ${{ env.JOB-NAME }}"
