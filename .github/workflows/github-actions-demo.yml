@@ -1,8 +1,12 @@
 name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: push
+env:
+  NAME: Devansh
 jobs:
   Explore-GitHub-Actions:
+    env:
+      NAME: Devansh-Under-Job
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
@@ -16,3 +20,9 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+      - run: echo "VARIABLE:$NAME"
+
+  Testing-ENV-VARIABLES:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Variable:$NAME"
