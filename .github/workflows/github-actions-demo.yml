@@ -31,3 +31,4 @@ jobs:
     steps:
       - run: echo "Variable:$NAME"
       - run: echo "JOB-NAME is ${{ vars.NAME }}"
+      - run: echo "${{ RUNNER_OS }}"
