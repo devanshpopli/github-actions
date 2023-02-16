@@ -30,4 +30,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Variable:$NAME"
-      - run: echo "JOB-NAME is ${{ env.NAME }}"
+      - run: echo "JOB-NAME is ${{ vars.NAME }}"
