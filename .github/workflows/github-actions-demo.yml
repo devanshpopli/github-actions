@@ -30,5 +30,5 @@ jobs:
     steps:
       - run: echo "Variable:$NAME"
       - run: echo "JOB-NAME is ${{ env.JOB-NAME }}"
-      - name: Getting Default env variables
-        run: echo "${{ env.GITHUB_ACTION }} ${{ env.CI }}"
+      - name: Getting Repository Secrets
+        run: echo "${{ secrets.PASSWORD }}"
