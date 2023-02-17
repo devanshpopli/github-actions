@@ -24,6 +24,7 @@ jobs:
     steps:
       - name: Get code
         uses: actions/checkout@v3
+      - run: sjbh993=--320398#*^#*@ (&^)
       - name: Cache dependencies
         id: cache
         uses: actions/cache@v3
