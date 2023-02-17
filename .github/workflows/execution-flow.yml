@@ -24,7 +24,6 @@ jobs:
     steps:
       - name: Get code
         uses: actions/checkout@v3
-      - run: sjbh993=--320398#*^#*@ (&^)
       - name: Cache dependencies
         id: cache
         uses: actions/cache@v3
@@ -82,7 +81,7 @@ jobs:
       - name: Deploy
         run: echo "Deploying..."
   expressions:
-    needs: deploy
+    needs: [deploy,lint]
     if: failure()
     runs-on: ubuntu-latest
     steps:
