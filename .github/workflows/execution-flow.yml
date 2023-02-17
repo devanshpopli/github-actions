@@ -83,7 +83,7 @@ jobs:
         run: echo "Deploying..."
   expressions:
     needs: deploy
-    if: success()
+    if: failure()
     runs-on: ubuntu-latest
     steps:
       - run: echo "It's running"
